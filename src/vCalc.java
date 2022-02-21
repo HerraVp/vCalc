@@ -222,7 +222,8 @@ public class vCalc implements ActionListener {
                 divButton.setBackground(null);
                 subButton.setBackground(null);
                 addButton.setBackground(null);
-                //rootButton.setBackground(null);
+                delButton.setBackground(null);
+                negButton.setBackground(null);
                 equButton.setBackground(null);
                 numberButtons[0].setBackground(null);
                 numberButtons[1].setBackground(null);
@@ -235,24 +236,25 @@ public class vCalc implements ActionListener {
                 numberButtons[8].setBackground(null);
                 numberButtons[9].setBackground(null);
                 decButton.setBackground(null);
-                clrButton.setForeground(Color.BLACK);
-                divButton.setForeground(Color.BLACK);
-                mulButton.setForeground(Color.BLACK);
-                subButton.setForeground(Color.BLACK);
-                addButton.setForeground(Color.BLACK);
-                equButton.setForeground(Color.BLACK);
+                clrButton.setForeground(null);
+                divButton.setForeground(null);
+                mulButton.setForeground(null);
+                subButton.setForeground(null);
+                addButton.setForeground(null);
+                equButton.setForeground(null);
+                negButton.setForeground(null);
             }
-            //rootButton.setForeground(Color.BLACK);
             case "Colored" -> {
                 frame.getContentPane().setBackground(null);
                 clrButton.setBackground(Color.RED);
+                delButton.setBackground(Color.GREEN);
+                negButton.setBackground(Color.PINK);
                 divButton.setBackground(Color.PINK);
                 mulButton.setBackground(Color.PINK);
                 subButton.setBackground(Color.PINK);
                 addButton.setBackground(Color.PINK);
-                //rootButton.setBackground(Color.PINK);
                 equButton.setBackground(Color.BLUE);
-                decButton.setBackground(Color.WHITE);
+                decButton.setBackground(Color.GREEN);
                 numberButtons[0].setBackground(Color.WHITE);
                 numberButtons[1].setBackground(Color.WHITE);
                 numberButtons[2].setBackground(Color.WHITE);
@@ -270,9 +272,10 @@ public class vCalc implements ActionListener {
                 addButton.setForeground(Color.WHITE);
                 equButton.setForeground(Color.WHITE);
                 negButton.setForeground(Color.WHITE);
+                decButton.setForeground(Color.WHITE);
             }
             case "Dark" -> {
-                final Color primaryDarkColor = new Color(229, 150, 150);
+                final Color primaryDarkColor = new Color(75, 73, 73);
                 final Color secondaryDarkColor = new Color(154, 154, 154);
                 frame.getContentPane().setBackground(new Color(35, 35, 35));
                 numberButtons[0].setBackground(secondaryDarkColor);
