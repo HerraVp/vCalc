@@ -1,3 +1,5 @@
+package me.vp;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -18,12 +20,10 @@ public class vCalc implements ActionListener {
 
 
     double num1 = 0, num2 = 0, result = 0;
-
     char operator;
 
-
     vCalc() {
-        frame = new JFrame("vCalc || v" + version);
+        frame = new JFrame("vCalc | v" + version);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 550);
         frame.setLayout(null);
@@ -196,8 +196,8 @@ public class vCalc implements ActionListener {
             String string = textfield.getText();
             textfield.setText(" ");
 
-            for(int i = 0; i < string.length() - 1; i++){
-                String strnew = string.substring(0, string.length()-1);
+            for (int i = 0; i < string.length() - 1; i++) {
+                String strnew = string.substring(0, string.length() - 1);
                 textfield.setText(strnew);
             }
         }
@@ -210,7 +210,7 @@ public class vCalc implements ActionListener {
         }
     }
 
-    private Consumer<ItemEvent> themeSwitchEventConsumer = event -> {
+    private final Consumer<ItemEvent> themeSwitchEventConsumer = event -> {
         if (event.getStateChange() != ItemEvent.SELECTED) return;
 
         String selectedTheme = (String) event.getItem();
